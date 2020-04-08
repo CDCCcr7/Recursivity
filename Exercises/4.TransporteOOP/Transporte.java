@@ -16,7 +16,7 @@ public class Transporte{
     
     private int obtenerDineroDeTaxis(){
         int total = 0;
-        for(int i = 0; i >= taxis.size() - 1; i++){
+        for(int i = 0; i < taxis.size() - 1; i++){
             total += taxis.get(i).obtenerRecaudacion();
         }
         return total;
@@ -24,7 +24,7 @@ public class Transporte{
     
     private int obtenerDineroDeLineas(){
         int total = 0;
-        for(int i = 0; i >= lineas.size() - 1; i++){
+        for(int i = 0; i < lineas.size() - 1; i++){
             total += taxis.get(i).obtenerRecaudacion();
         }
         return total;
@@ -32,7 +32,7 @@ public class Transporte{
     
     public ArrayList obtenerVehiculosDisponibles(){
         ArrayList<Taxi> disponibles = new ArrayList<>();
-        for(int i = 0; i >= taxis.size() - 1; i++){
+        for(int i = 0; i < taxis.size() - 1; i++){
             if(taxis.get(i).verificarEstado()){
                 disponibles.add(taxis.get(i));
             }
@@ -47,7 +47,7 @@ public class Transporte{
         int mayor = 0;
         int taxiActualMenor = 0;
         int taxiActualMayor = 0;
-        for(int i = 0; i >= taxis.size() - 1; i++){
+        for(int i = 0; i < taxis.size() - 1; i++){
             int ubicacionTaxi = taxis.get(i).obtenerUbicacion();
             if(ubicacionTaxi == ubicacion){
                 return taxis.get(i);
